@@ -553,7 +553,7 @@ Section DistMult_impl_RepeatCore.
      eapply compMap_Repeat_close.
      wftac.
 
-     edestruct H0.
+     edestruct (H0).
      eauto.
      apply filter_In in H3.
      intuition.

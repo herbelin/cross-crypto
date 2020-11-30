@@ -524,8 +524,8 @@ Lemma rat_inf_limit_product : forall (f1 f2 : nat -> Rat -> Prop) c1 c2,
   exists (maxList (x :: x0 :: x1 :: nil)).
   intuition.
   unfold ratMult_rel in *.
-  edestruct H.
-  edestruct H0.
+  edestruct (H).
+  edestruct (H0).
   rewrite H8; eauto.
   eapply leRat_trans.
   eapply (ratTriangleInequality _ _ (c1 * x3)).
@@ -620,7 +620,7 @@ Lemma rat_inf_limit_comp : forall (f : nat -> Rat -> Prop)(g : Rat -> Rat -> Pro
 
   unfold continuous_at, rat_limit, rat_inf_limit, inf_limit in *.
   intuition.
-  edestruct H1; eauto.
+  edestruct (H1); eauto.
   intuition.
   destruct (H x).
   trivial.
@@ -674,7 +674,7 @@ Lemma rat_inf_limit_eq : forall f a1 a2,
 
   unfold rat_inf_limit, inf_limit in *.
   intuition.
-  edestruct H; eauto.
+  edestruct (H); eauto.
   exists x.
   intuition.
   rewrite <- H0.

@@ -235,7 +235,7 @@ Theorem negligible_eq :
   intuition.
   unfold negligible in *.
   intuition.
-  edestruct H.
+  edestruct (H).
   econstructor.
   intuition.
   eapply H1.
@@ -255,7 +255,7 @@ Lemma negligible_le :
   intuition.
   unfold negligible in *.
   intuition.
-  edestruct H0.
+  edestruct (H0).
   econstructor.
   intuition.
   eapply H1.

@@ -327,7 +327,7 @@ Section RandomPerm.
 
     intuition.
     specialize (H (d :: nil)).
-    edestruct H.
+    edestruct (H).
     econstructor.
     simpl. intuition.
     econstructor.

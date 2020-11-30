@@ -383,7 +383,7 @@ Theorem list_pred_impl_arrayLookup :
   inversion H3; clear H3; subst.
   econstructor; eauto.
   rewrite H4 in H3.
-  edestruct H.
+  edestruct (H).
   eauto.
   intuition.
   

@@ -2115,7 +2115,7 @@ Lemma sumList_rel_left_total : forall (A : Type)(rel : A -> Rat -> Prop)(ls : li
   econstructor.
   intuition.
   
-  edestruct H.
+  edestruct (H).
   left.
   eauto.
   edestruct IHls.

@@ -1696,14 +1696,14 @@ Lemma lowDistApprox_bind_evalDist_limit : forall (A B :Set)(c1 : Comp B)(c2 : B 
   specialize (H1 ((1 / 3 ) * (epsilon * (RatIntro 1 (natToPosnat H2))))).
   (* ---------------------------- choose epsilon here ------------------------------- *)
 
-  edestruct H4.
+  destruct (H4).
   eapply ratMult_nz;
   econstructor.
   discriminate.
   eapply ratMult_nz; econstructor; intuition.
   clear H4.
   
-  edestruct H1.
+  destruct (H1).
   eapply ratMult_nz; econstructor.
   discriminate.
   eapply ratMult_nz; econstructor; intuition.
@@ -2921,7 +2921,7 @@ Lemma datRepeat_left_total : forall n (A : Set)(eqd : eq_dec A)(t : DistApproxTr
   econstructor.
   trivial.
   
-  edestruct IHn; eauto.
+  edestruct (IHn); eauto.
   econstructor.
   eapply datRepeat_leaf_Some_repeat.
   eauto.
